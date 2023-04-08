@@ -25,6 +25,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <stddef.h>
 #include <stdint.h>
 
 #ifndef INCL_ZONEDETECT_H_
@@ -83,6 +84,7 @@ ZD_EXPORT const char *ZDGetErrorString(int errZD);
 ZD_EXPORT float* ZDPolygonToList(const ZoneDetect *library, uint32_t polygonId, size_t* length);
 
 ZD_EXPORT char* ZDHelperSimpleLookupString(const ZoneDetect* library, float lat, float lon);
+ZD_EXPORT void ZDHelperSimpleLookupStringFree(char* str);
 
 #ifdef __cplusplus
 }
